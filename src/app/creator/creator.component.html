@@ -1,0 +1,96 @@
+<p>creator works!</p>
+<div *ngIf="!title" class="title">
+  <mat-form-field appearance="outline">
+    <mat-label>Title of Quiz</mat-label>
+    <input
+      matInput
+      placeholder="My Quiz"
+      type="text"
+      #title
+      value="Geography Quiz"
+    />
+    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
+  </mat-form-field>
+  <br />
+  <button mat-stroked-button color="primary" (click)="getTitle(title.value)">
+    Next
+  </button>
+</div>
+<div class="questions" *ngIf="title">
+  <div class="mat-display-1" style="text-align: center;">
+    <p>{{ game.title }}</p>
+  </div>
+  <div class="whole_q" *ngFor="let question of quiz_questions">
+    <div class="q">
+      <h2 class="q_number">{{ question.length }}</h2>
+      <p class="q_stmt">{{ question.question }}</p>
+    </div>
+    <div class="choices">
+      <div *ngFor="let choice of question.choices" style="color: black;">
+        <p>{{ choice }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="question_form_wrapper" *ngIf="title">
+    <form #question_form="ngForm" (ngSubmit)="onSubmit(question_form)">
+      <div class="question_form">
+        <mat-form-field class="example-full-width" style="width: 90%;">
+          <mat-label>Question</mat-label>
+          <input
+            matInput
+            placeholder="What is 1+1?"
+            type="text"
+            name="question"
+            [(ngModel)]="temp_object.question"
+            value="What is the capital city of Kenya?"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-quater-width" style="width: 20%;">
+          <mat-label>Choice</mat-label>
+          <input
+            matInput
+            placeholder="Choice 1"
+            name="choice1"
+            value="nairobi"
+            [(ngModel)]="temp_object.choices.choice1"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-quater-width" style="width: 20%;">
+          <mat-label>Choice</mat-label>
+          <input
+            matInput
+            placeholder="Choice 2"
+            name="choice2"
+            value="Mombasa"
+            [(ngModel)]="temp_object.choices.choice2"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-quater-width" style="width: 20%;">
+          <mat-label>Choice</mat-label>
+          <input
+            matInput
+            placeholder="Choice 3"
+            name="choice3"
+            value="Kampala"
+            [(ngModel)]="temp_object.choices.choice3"
+          />
+        </mat-form-field>
+        <mat-form-field class="example-quater-width" style="width: 20%;">
+          <mat-label>Choice</mat-label>
+          <input
+            matInput
+            placeholder="Choice 4"
+            name="choice4"
+            value="Cairo"
+            [(ngModel)]="temp_object.choices.choice4"
+          /> </mat-form-field
+        ><br />
+      </div>
+    </form>
+    <button mat-stroked-button color="primary" (click)="onSubmit()">Add</button>
+    <button mat-stroked-button color="accent" (click)="saveGame()">
+      Save Game
+    </button>
+  </div>
+</div>
