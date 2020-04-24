@@ -1,0 +1,10 @@
+/* .wrapper {
+  display: grid;
+  grid-template-rows: 1fr, 2fr;
+  grid-gap: 1em;
+} */
+.options_panel {
+  margin: 1em;
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,0 +1,30 @@
+<p>game works!</p>
+<div class="wrapper">
+  <div class="options_panel">
+    <button mat-raised-button color="accent">PLAY</button>
+
+    <button mat-stroked-button color="primary">EDIT</button>
+
+    <button
+      mat-flat-button
+      color="warn"
+      aria-label="Example icon button with a delete icon"
+    >
+      Delete
+    </button>
+  </div>
+  <div class="mat-display-1" style="text-align: center;">
+    <p>{{ game.title }}</p>
+  </div>
+  <div class="whole_q" *ngFor="let question of quiz_questions">
+    <div class="q">
+      <h2 class="q_number">{{ question.length }}</h2>
+      <p class="q_stmt">{{ question.question }}</p>
+    </div>
+    <div class="choices">
+      <div *ngFor="let choice of question.choices" style="color: black;">
+        <p>{{ choice }}</p>
+      </div>
+    </div>
+  </div>
+</div>

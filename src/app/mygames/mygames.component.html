@@ -1,6 +1,6 @@
 <p>mygames works!</p>
 <div *ngFor="let game of game_list">
   <a routerLink="/mygame/{{ game.$key }}">
-    <div (click)="onClick(game)" class="titles">{{ game.title }}</div>
+    <div class="titles">{{ game.title }}</div>
   </a>
 </div>

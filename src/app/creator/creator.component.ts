@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { Game } from "../mygames/game";
+import { CreatorService } from "./creator.service";
+import { Game } from "../game/game.model";
 
 @Component({
   selector: "app-creator",
@@ -20,13 +21,14 @@ export class CreatorComponent implements OnInit {
   };
   quiz_questions;
 
-  constructor() {}
+  constructor(private creatorService: CreatorService) {}
 
   ngOnInit() {}
   getTitle(title: string) {
     this.title = true;
     this.game = new Game();
     this.game.setTitle(title);
+    console.log(this.creatorService.getGames());
   }
   onSubmit() {
     // console.log(this.temp_object);
@@ -43,6 +45,7 @@ export class CreatorComponent implements OnInit {
   saveGame() {
     console.log(this.game);
     //!Send to database
+    this.creatorService.addGame(this.game);
   }
 
   private formatChoices(temp_obj: {

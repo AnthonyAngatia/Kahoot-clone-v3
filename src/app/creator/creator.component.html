@@ -89,7 +89,13 @@
       </div>
     </form>
     <button mat-stroked-button color="primary" (click)="onSubmit()">Add</button>
-    <button mat-stroked-button color="accent" (click)="saveGame()">
+    <button
+      mat-stroked-button
+      color="accent"
+      (click)="saveGame()"
+      routerLink="/mygames"
+    >
+      <a></a>
       Save Game
     </button>
   </div>
