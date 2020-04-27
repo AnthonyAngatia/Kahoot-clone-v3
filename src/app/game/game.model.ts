@@ -3,6 +3,7 @@ export class Game {
   private title: string;
   private quiz_questions = [];
   private creator: string; //Later models
+  private ref_id: number;
 
   constructor() {}
   public getId(): string {
@@ -29,5 +30,11 @@ export class Game {
   }
   public setCreator(value: string) {
     this.creator = value;
+  }
+  public getRefId() {
+    return this.ref_id;
+  }
+  public setRefId(value: number) {
+    this.ref_id = value;
   }
 }

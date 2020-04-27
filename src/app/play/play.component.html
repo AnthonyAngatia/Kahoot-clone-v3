@@ -1,0 +1,25 @@
+<p>play works!</p>
+<div style="text-align: center;">
+  <div class="mat-display-1" style="text-align: center;">
+    <p>{{ game.title }}</p>
+  </div>
+  <div class="mat-display-1" style="text-align: center;">
+    <p>{{ game.ref_id }}</p>
+  </div>
+
+  <mat-slide-toggle
+    #randomize
+    [(ngModel)]="isChecked"
+    (change)="onChange(randomize.checked)"
+    color="primary"
+  >
+    Randomize Quiz
+  </mat-slide-toggle>
+  <div class="flex" *ngFor="let player of player_list">
+    <h3>{{ player }}</h3>
+  </div>
+
+  <div class="mat-display-4" style="text-align: center;">
+    <button mat-raised-button color="accent">Start Game</button>
+  </div>
+</div>

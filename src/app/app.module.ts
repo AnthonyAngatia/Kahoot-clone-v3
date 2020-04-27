@@ -12,9 +12,10 @@ import { AngularFireModule } from "angularfire2";
 import { AngularFireDatabaseModule } from "angularfire2/database";
 import { environment } from "../environments/environment";
 import { GameComponent } from './game/game.component';
+import { PlayComponent } from './play/play.component';
 
 @NgModule({
-  declarations: [AppComponent, CreatorComponent, MygamesComponent, GameComponent],
+  declarations: [AppComponent, CreatorComponent, MygamesComponent, GameComponent, PlayComponent],
   imports: [
     BrowserModule,
     FormsModule,

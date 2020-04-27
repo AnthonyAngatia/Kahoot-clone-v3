@@ -1,0 +1,6 @@
+.flex {
+  display: inline-flex;
+  margin: 1em;
+  border: 3px solid chartreuse;
+  text-align: center;
+}

@@ -19,7 +19,7 @@ export class GameComponent implements OnInit {
   ngOnInit() {
     const id = Object.values(this.route.snapshot.params).toString();
     this.game.setId(id);
-    this.getGame(id);
+    this.getGame(id); //retrieving from the db
   }
 
   getGame(id: string) {
@@ -42,6 +42,5 @@ export class GameComponent implements OnInit {
           }
         });
       });
-    console.log(this.game);
   }
 }

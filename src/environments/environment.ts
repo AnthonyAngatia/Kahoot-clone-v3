@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyBcPurA-SVKK1OrkRd3qZmztvVZvK6DRYo",
+    authDomain: "kahoot-clone-f2f79.firebaseapp.com",
+    databaseURL: "https://kahoot-clone-f2f79.firebaseio.com",
+    projectId: "kahoot-clone-f2f79",
+    storageBucket: "kahoot-clone-f2f79.appspot.com",
+    messagingSenderId: "228794380037",
+    appId: "1:228794380037:web:0a4097941d3f8ae9b7916c",
+    measurementId: "G-0Y7J0J0TCR",
+  },
 };
 
 /*
