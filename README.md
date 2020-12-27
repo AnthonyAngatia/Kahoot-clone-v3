@@ -1,33 +1,9 @@
 # KahootV3
 
-# The application is incomplete and has been put on hold
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+> - Attempt to make a Kahoot clone using angular framework.
+> - Kahoot! is a game-based learning platform, used as educational technology in schools and other educational institutions. Its learning games, "kahoots", are user-generated multiple-choice quizzes that can be accessed via a web browser or the Kahoot app. https://kahoot.com/
+> - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-## About Application
-A quiz app synonymous to Kahoot App, an application where users create quizes and other users can be able to answer the question and compete in real-time.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+## Exras
+> - Used this project to teach myself Angular framework therefore no guarantee of best practices
 
